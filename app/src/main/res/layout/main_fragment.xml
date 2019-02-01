@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context=".ui.main.MainFragment">
+
+    <fragment
+        android:id="@+id/firstCardFragment"
+        android:name="com.example.bdias.cardhome.ui.main.FirstCardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_first_card" />
+
+    <fragment
+        android:id="@+id/secondCardFragment"
+        android:name="com.example.bdias.cardhome.ui.main.SecondCardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstCardFragment"
+        tools:layout="@layout/fragment_second_card" />
+
+    <fragment
+        android:id="@+id/thirdCardFragment"
+        android:name="com.example.bdias.cardhome.ui.main.NoErrorStateCardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondCardFragment"
+        tools:layout="@layout/fragment_no_error_state_card"/>
+
+</android.support.constraint.ConstraintLayout>
